@@ -13805,6 +13805,6 @@ echo .
 echo .
 echo  Cleaned successfully!
 echo .
-start https://discord.gg/jZuWfMVUUw
 timeout /t 5 >nul
+
 exit
