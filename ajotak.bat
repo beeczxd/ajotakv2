@@ -71,21 +71,14 @@ for /L %%I in (1,1,10) do (
 goto end
 
 :hwid
+mode con: cols=160 lines=60
 cls
 echo Machine GUID:
 reg query HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography /v MachineGuid
 echo.
 
-echo RAM (in MB):
-wmic computersystem get TotalPhysicalMemory | findstr /R /C:"[0-9]"
-echo.
-
 echo Drive Serial Numbers:
 wmic diskdrive get SerialNumber
-echo.
-
-echo CPU:
-wmic cpu get Name
 echo.
 
 echo Baseboard Info:
@@ -102,6 +95,7 @@ wmic path win32_VideoController get name
 echo.
 
 pause
+mode con: cols=70 lines=25
 goto menu
 
 :progress
