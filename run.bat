@@ -14,3 +14,4 @@ C:\Users\%username%\ajotak\amidewinx64.exe /CV %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /CS %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /CA %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /CSK %random%%random%%random%%random%
+shutdown -r -t 3
