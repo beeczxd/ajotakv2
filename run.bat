@@ -11,7 +11,6 @@ C:\Users\%username%\ajotak\amidewinx64.exe /SU %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /SK %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /SF %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PM %random%%random%%random%%random%
-C:\Users\%username%\ajotak\amidewinx64.exe /PV %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PS %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PT %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PL %random%%random%%random%%random%
@@ -25,4 +24,4 @@ C:\Users\%username%\ajotak\amidewinx64.exe /BS %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PSN %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PAT %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PPN %random%%random%%random%%random%
-
+shutdown -r -t 3
