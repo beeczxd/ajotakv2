@@ -113,14 +113,15 @@ for /L %%i in (1,10,100) do (
 exit /b
 
 :changes
-echo Ajotak V2.1
-echo -----------
+echo Ajotak V2.2
+echo -------------------------------------
+echo Fixed an issue with the processors serial number did not change.
 echo Improved spoofing speed.
-echo Changed spoofing algorythm.
-echo Fixed an issue with the cleaners (ran too many times).
-echo Improved the serials section.
+echo Made cleaners better.
+echo ------------------------------------- 
 pause
 goto menu
 :end
 exit /b
+
 
