@@ -25,6 +25,7 @@ echo ======================================================
 echo   1.) Woof
 echo   2.) Clean
 echo   3.) Check Serials
+echo   4.) Changelogs
 echo ======================================================
 echo.
 set /p choice= Selection: 
@@ -32,6 +33,7 @@ set /p choice= Selection:
 if "%choice%"=="1" goto woof
 if "%choice%"=="2" goto clean
 if "%choice%"=="3" goto hwid
+if "%choice%"=="4" goto changes
 goto menu
 
 :woof
@@ -108,5 +110,13 @@ for /L %%i in (1,10,100) do (
 )
 exit /b
 
+:changes
+echo Ajotak V2.1
+echo -----------
+echo Improved spoofing speed.
+echo Changed spoofing algorythm.
+echo Fixed an issue with the cleaners (ran too many times).
+
 :end
 exit /b
+
