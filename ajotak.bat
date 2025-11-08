@@ -93,6 +93,10 @@ echo UUID:
 wmic csproduct get UUID
 echo.
 
+echo CPU:
+powershell -Command "Get-WmiObject Win32_Processor | ForEach-Object { $_.SerialNumber }"
+echo.
+
 echo GPU:
 wmic path win32_VideoController get name
 echo.
@@ -116,7 +120,10 @@ echo -----------
 echo Improved spoofing speed.
 echo Changed spoofing algorythm.
 echo Fixed an issue with the cleaners (ran too many times).
-
+echo Improved the serials section.
+pause
+goto menu
 :end
 exit /b
+
 
