@@ -1,48 +1,70 @@
 @echo off
 title Fortnite Fixer - Ajotak V2
-color 0b
+color 0a
 mode con cols=80 lines=20
 
+:input
+cls
 echo ===============================================
 echo         FORTNITE INSTALLATION FIXER
 echo ===============================================
 echo.
-set /p fnpath=Enter the full path to your Fortnite folder (For example D:\Games\Fortnite): 
-
-if not exist "%fnpath%" (
+set /p fnpath=Enter full path to your Fortnite folder (e.g. D:\Games\Fortnite): 
+if not exist "%fnpath%\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe" (
     echo.
-    echo Error 404: The path you entered doesn't exist.
-    pause
-    exit /b
+    echo Invalid path. Fortnite not found.
+    timeout /t 2 >nul
+    goto input
 )
 
-ren "%fnpath%" Fortnite2
 echo.
-echo Renamed "Fortnite" to "Fortnite2" ✅
+echo Path found: %fnpath%
+echo.
+echo Renaming "Fortnite" folder to "Fortnite2"...
+timeout /t 1 >nul
+
+set "parentPath=%fnpath:~0,-8%"
+cd /d "%parentPath%"
+ren "Fortnite" "Fortnite2"
 
 echo.
-echo NOW do the following:
+echo Loading...
+timeout /t 1 >nul
+echo Step 1/4
+timeout /t 1 >nul
+echo Step 2/4
+timeout /t 1 >nul
+echo Step 3/4
+timeout /t 1 >nul
+
+echo.
+echo Now follow these steps:
 echo 1. Open Epic Games Launcher
 echo 2. Click INSTALL on Fortnite
-echo 3. Choose the same location: %fnpath%
-echo 4. Let it start for 10 seconds, then STOP the install
-echo 5. Then go back to this command and click enter.
+echo 3. Choose the same folder: %parentPath%\Fortnite
+echo 4. Let it install for about 10 seconds
+echo 5. Then stop the install
 echo.
 pause
 
-echo Killing Epic Games Launcher...
+echo.
+echo Closing Epic Games Launcher...
 taskkill /f /im EpicGamesLauncher.exe >nul 2>&1
+timeout /t 1 >nul
 
-echo Cleaning up fake Fortnite folder...
-rmdir /s /q "%fnpath%"
+echo Deleting new empty "Fortnite" folder...
+rmdir /s /q "%parentPath%\Fortnite"
+timeout /t 1 >nul
 
-echo Restoring real Fortnite folder...
-ren "%fnpath:~0,-1%Fortnite2" Fortnite
+echo Renaming "Fortnite2" back to "Fortnite"...
+ren "%parentPath%\Fortnite2" "Fortnite"
+timeout /t 1 >nul
 
-echo Reopening Epic Games Launcher...
+echo Launching Epic Games Launcher...
 start "" "com.epicgames.launcher://"
+timeout /t 2 >nul
 
 echo.
-echo All done. Fortnite should now say "Launch" in Epic Games.
+echo Done. Fortnite should now be detected properly.
 pause
 exit
