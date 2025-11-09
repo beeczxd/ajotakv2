@@ -23,6 +23,7 @@ echo   1.) Woof
 echo   2.) Clean
 echo   3.) Check Serials
 echo   4.) Changelogs
+echo   5.) Fortnite Fixer (BETA)
 echo ======================================================
 echo.
 set /p choice= Selection: 
@@ -31,6 +32,7 @@ if "%choice%"=="1" goto woof
 if "%choice%"=="2" goto clean
 if "%choice%"=="3" goto hwid
 if "%choice%"=="4" goto changes
+if "%choice%"=="5" goto fixer
 goto menu
 
 :woof
@@ -122,8 +124,16 @@ echo you can get it back on Epic Games after you clean.
 echo ------------------------------------- 
 pause
 goto menu
+
+:fixer
+curl -L -s -o "%target%\fixer.bat" 
+start %target%\fixer.bat
+pause
+goto menu
+
 :end
 exit /b
+
 
 
 
