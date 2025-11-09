@@ -113,16 +113,18 @@ for /L %%i in (1,10,100) do (
 exit /b
 
 :changes
-echo Ajotak V2.2
+echo Ajotak V2.3
 echo -------------------------------------
-echo Fixed an issue with the processors serial number did not change.
-echo Improved spoofing speed.
-echo Made cleaners better.
+echo Made spoofing even faster than before.
+echo Tester lasted for 3+ hours on a locked motherboard.
+echo Added a feature where if you have Fortnite installed
+echo you can get it back on Epic Games after you clean.
 echo ------------------------------------- 
 pause
 goto menu
 :end
 exit /b
+
 
 
 
