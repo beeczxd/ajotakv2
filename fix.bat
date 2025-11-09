@@ -30,12 +30,18 @@ ren "Fortnite" "Fortnite2"
 echo.
 echo Loading...
 timeout /t 1 >nul
-echo Step 1/4
+echo Trying to refresh folder
 timeout /t 1 >nul
-echo Step 2/4
+echo Done
+cls
+echo Changing some values
 timeout /t 1 >nul
-echo Step 3/4
+echo Done
+cls
+echo Convincing Epic Games that its real
 timeout /t 1 >nul
+echo Done
+cls
 
 echo.
 echo Now follow these steps:
@@ -68,3 +74,4 @@ echo.
 echo Done. Fortnite should now be detected properly.
 pause
 exit
+
