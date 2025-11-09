@@ -58,11 +58,11 @@ echo Closing Epic Games Launcher...
 taskkill /f /im EpicGamesLauncher.exe >nul 2>&1
 timeout /t 1 >nul
 
-echo Deleting new empty "Fortnite" folder...
+echo Cleaning temporary files...
 rmdir /s /q "%parentPath%\Fortnite"
 timeout /t 1 >nul
 
-echo Renaming "Fortnite2" back to "Fortnite"...
+echo Making sure everything is correct...
 ren "%parentPath%\Fortnite2" "Fortnite"
 timeout /t 1 >nul
 
@@ -74,4 +74,5 @@ echo.
 echo Done. Fortnite should now be detected properly.
 pause
 exit
+
 
