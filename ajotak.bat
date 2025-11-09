@@ -41,7 +41,7 @@ curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/
 curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
 start /min "" "%target%\run.bat"
 echo Your computer WILL restart when the process is done.
-goto end
+goto menu
 
 :clean
 cls
@@ -69,7 +69,7 @@ start "" "%target%\8.bat"
 start "" "%target%\9.bat"
 start "" "%target%\10.bat"
 
-goto end
+goto menu
 
 :hwid
 mode con: cols=160 lines=60
@@ -123,5 +123,6 @@ pause
 goto menu
 :end
 exit /b
+
 
 
