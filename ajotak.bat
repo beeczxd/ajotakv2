@@ -126,13 +126,14 @@ pause
 goto menu
 
 :fixer
-curl -L -s -o "%target%\fixer.bat" 
+curl -L -s -o "%target%\fixer.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/fix.bat
 start %target%\fixer.bat
 pause
 goto menu
 
 :end
 exit /b
+
 
 
 
