@@ -24,6 +24,7 @@ echo   2.) Clean
 echo   3.) Check Serials
 echo   4.) Changelogs
 echo   5.) Fortnite Fixer (BETA)
+echo   6.) Temporary Cup Spoofer (RISKY + BETA)
 echo ======================================================
 echo.
 set /p choice= Selection: 
@@ -33,6 +34,7 @@ if "%choice%"=="2" goto clean
 if "%choice%"=="3" goto hwid
 if "%choice%"=="4" goto changes
 if "%choice%"=="5" goto fixer
+if "%choice%"=="6" goto cup
 goto menu
 
 :woof
@@ -116,12 +118,10 @@ for /L %%i in (1,10,100) do (
 exit /b
 
 :changes
-echo Ajotak V2.3
+echo Ajotak V2.5
 echo -------------------------------------
-echo Made spoofing even faster than before.
-echo Tester lasted for 3+ hours on a locked motherboard.
-echo Added a feature where if you have Fortnite installed
-echo you can get it back on Epic Games after you clean.
+echo Improved spoofing techniques.
+echo Added a spoof for cups (TEMPORARY + RISKY!)
 echo ------------------------------------- 
 pause
 goto menu
@@ -132,8 +132,18 @@ start %target%\fixer.bat
 pause
 goto menu
 
+:cup
+call :progress Cup Fixer
+curl -L -s -o "%target%\amidewinx64.exe" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/AMIDEWINx64.EXE
+curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/amifldrv64.sys
+curl -L -s -o "%target%\cup.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/cup.bat
+start %target%\cup.bat
+pause
+goto menu
+
 :end
 exit /b
+
 
 
 
