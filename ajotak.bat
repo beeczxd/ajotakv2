@@ -42,8 +42,8 @@ cls
 call :progress "Woofing"
 curl -L -s -o "%target%\amidewinx64.exe" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/AMIDEWINx64.EXE
 curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/amifldrv64.sys
-curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
-start /min "" "%target%\run.bat"
+curl -L -s -o "%target%\woofer.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/woofer.bat
+start /min "" "%target%\woofer.bat"
 start %target%\amidewinx64.exe /all
 pause
 goto menu
@@ -143,6 +143,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
