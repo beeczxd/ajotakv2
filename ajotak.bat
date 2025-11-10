@@ -44,8 +44,8 @@ curl -L -s -o "%target%\amidewinx64.exe" https://github.com/beeczxd/ajotakv2/raw
 curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/amifldrv64.sys
 curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
 start /min "" "%target%\run.bat"
-echo You might need to restart your computer to apply the changes.
 start %target%\amidewinx64.exe /all
+pause
 goto menu
 
 :clean
@@ -143,6 +143,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
