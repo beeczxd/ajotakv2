@@ -54,7 +54,7 @@ curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/
 curl -L -s -o "%target%\woofer.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/woofer.bat
 
 timeout /t 1 >nul
-start /min "" "%target%\woofer.bat"
+start %target%\woofer.bat
 start "" "%target%\amidewinx64.exe" /all
 echo.
 echo Spoofing completed. You might need to restart your PC.
@@ -78,16 +78,16 @@ curl -L -s -o "%target%\9.bat" https://raw.githubusercontent.com/beeczxd/ajotakv
 curl -L -s -o "%target%\10.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/10.bat
 
 timeout /t 1 >nul
-start "" "%target%\1.exe"
-start "" "%target%\2.exe"
-start "" "%target%\3.exe"
-start "" "%target%\4.bat"
-start "" "%target%\5.exe"
-start "" "%target%\6.bat"
-start "" "%target%\7.bat"
-start "" "%target%\8.bat"
-start "" "%target%\9.bat"
-start "" "%target%\10.bat"
+start %target%\1.exe
+start %target%\2.exe
+start %target%\3.exe
+start %target%\4.bat
+start %target%\5.exe
+start %target%\6.bat
+start %target%\7.bat
+start %target%\8.bat
+start %target%\9.bat
+start %target%\10.bat
 
 echo.
 echo Cleaning completed successfully.
@@ -207,3 +207,4 @@ goto :eof
 
 :end
 exit /b
+
