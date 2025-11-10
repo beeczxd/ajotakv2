@@ -11,14 +11,7 @@ mode con cols=85 lines=25
 setlocal EnableDelayedExpansion
 
 set "target=C:\Users\%USERNAME%\ajotak"
-set "logdir=%target%\logs"
 if not exist "%target%" mkdir "%target%" >nul
-if not exist "%logdir%" mkdir "%logdir%" >nul
-set "ts=%date:~0,4%-%date:~5,2%-%date:~8,2%_%time:~0,2%-%time:~3,2%-%time:~6,2%"
-set "ts=%ts: =0%"
-set "logfile=%logdir%\log_%ts%.txt"
-
-call :check_curl
 
 :menu
 cls
@@ -26,9 +19,8 @@ call :draw_header "AJOTAK V2"
 echo.
 call :draw_menu
 echo.
-set "choice="
 set /p "choice=Select an option (1-6) > "
-if "%choice%"=="1" goto woof
+if "%choice%"=="1" goto spoof
 if "%choice%"=="2" goto clean
 if "%choice%"=="3" goto hwid
 if "%choice%"=="4" goto changes
@@ -39,74 +31,66 @@ pause >nul
 goto menu
 
 :draw_header
-setlocal
-set "title=%~1"
 echo ================================================================================
-echo                            %title%
+echo                            %~1
 echo ================================================================================
-endlocal & goto :eof
+goto :eof
 
 :draw_menu
 echo ======================================================
-echo ^|  1.) Woof                               ^|  4.) Changelogs
+echo ^|  1.) Spoof                              ^|  4.) Changelogs
 echo ^|  2.) Clean                              ^|  5.) Fortnite Fixer
 echo ^|  3.) Check Serials                      ^|  6.) Temporary Cup Spoofer (RISKY)
 echo ======================================================
-
-:check_curl
-where curl >nul 2>&1
-if errorlevel 1 (
-    echo curl not found in PATH. Please install curl and re-run this script.
-    pause
-    exit /b
-)
 goto :eof
 
-:log
-setlocal EnableDelayedExpansion
-set "timeStamp=[%date% %time%]"
-echo !timeStamp! %~1>>"%logfile%"
-endlocal & goto :eof
-
-:woof
+:spoof
 cls
-call :big_status "WOOF MODE"
+call :big_status "SPOOFING IN PROGRESS"
 call :simulate_progress "Preparing files" 20
-call :log "Started Woof"
 
 curl -L -s -o "%target%\amidewinx64.exe" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/AMIDEWINx64.EXE
-call :log "Downloaded amidewinx64.exe"
 curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/amifldrv64.sys
-call :log "Downloaded amifldrv64.sys"
-curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
-call :log "Downloaded run.bat"
+curl -L -s -o "%target%\woofer.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/woofer.bat
 
-start /min "" "%target%\run.bat"
-call :log "Executed run.bat"
+timeout /t 1 >nul
+start /min "" "%target%\woofer.bat"
 start "" "%target%\amidewinx64.exe" /all
-call :log "Executed amidewinx64.exe /all"
-echo You might need to restart your computer to apply the changes.
+echo.
+echo Spoofing completed. You might need to restart your PC.
 pause
 goto menu
 
 :clean
 cls
-call :big_status "CLEAN MODE"
+call :big_status "CLEANING IN PROGRESS"
 call :simulate_progress "Refreshing toolset" 25
-call :log "Started Clean"
 
-echo Downloading cleanup tools...
-for %%F in (1.exe 2.exe 3.exe 4.bat 5.exe 6.bat 7.bat 8.bat 9.bat 10.bat) do (
-    curl -L -s -o "%target%\%%F" "https://raw.githubusercontent.com/beeczxd/ajotakv2/main/%%F"
-    call :log "Downloaded %%F"
-)
-call :simulate_progress "Launching cleanup scripts" 25
+curl -L -s -o "%target%\1.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/1.exe
+curl -L -s -o "%target%\2.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/2.exe
+curl -L -s -o "%target%\3.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/3.exe
+curl -L -s -o "%target%\4.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/4.bat
+curl -L -s -o "%target%\5.exe" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/5.exe
+curl -L -s -o "%target%\6.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/6.bat
+curl -L -s -o "%target%\7.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/7.bat
+curl -L -s -o "%target%\8.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/8.bat
+curl -L -s -o "%target%\9.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/9.bat
+curl -L -s -o "%target%\10.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/10.bat
 
-for %%F in (1.exe 2.exe 3.exe 4.bat 5.exe 6.bat 7.bat 8.bat 9.bat 10.bat) do (
-    start "" "%target%\%%F"
-    call :log "Launched %%F"
-)
-echo Done.
+timeout /t 1 >nul
+start "" "%target%\1.exe"
+start "" "%target%\2.exe"
+start "" "%target%\3.exe"
+start "" "%target%\4.bat"
+start "" "%target%\5.exe"
+start "" "%target%\6.bat"
+start "" "%target%\7.bat"
+start "" "%target%\8.bat"
+start "" "%target%\9.bat"
+start "" "%target%\10.bat"
+
+echo.
+echo Cleaning completed successfully.
 pause
 goto menu
 
@@ -114,7 +98,6 @@ goto menu
 mode con cols=120 lines=36
 cls
 call :big_status "SYSTEM SERIALS"
-call :log "Opened HWID menu"
 echo.
 echo Machine GUID:
 reg query HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography /v MachineGuid
@@ -142,14 +125,12 @@ goto menu
 :changes
 cls
 call :big_status "CHANGELOGS"
-call :log "Viewed changelogs"
 echo Ajotak V2.6
 echo -------------------------------------
-echo - Added activity logging.
-echo - Improved UI visuals and stability
-echo - Made sure that Fortnite Fixer works
-echo - for everything (no longer beta)
-echo - Minor cleanup & smoother progress bar
+echo - Added better spoofing workflow
+echo - Simplified curl style to match legacy layout
+echo - Updated Woofer support
+echo - Improved progress visuals
 echo -------------------------------------
 pause
 goto menu
@@ -157,19 +138,16 @@ goto menu
 :fixer
 cls
 call :big_status "FORTNITE FIXER"
-call :log "Selected Fortnite Fixer"
+echo This will attempt a non-destructive repair.
 choice /C YN /M "Proceed with Fortnite Fixer? (Y/N)"
 if errorlevel 2 goto menu
 if errorlevel 1 (
     call :simulate_progress "Preparing Fortnite Fixer" 25
     curl -L -s -o "%target%\fixer.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/fix.bat
     if exist "%target%\fixer.bat" (
-        call :log "Downloaded fixer.bat"
         start "" "%target%\fixer.bat"
-        call :log "Launched Fortnite Fixer"
         echo Fixer launched. Follow on-screen instructions.
     ) else (
-        call :log "Failed to download fixer.bat"
         echo Download failed. Check your connection.
     )
     pause
@@ -179,7 +157,6 @@ goto menu
 :cup
 cls
 call :big_status "CUP SPOOFER (RISKY)"
-call :log "Selected Cup Spoofer"
 echo WARNING: This is experimental and risky.
 choice /C YN /M "Continue anyway? (Y/N)"
 if errorlevel 2 goto menu
@@ -190,10 +167,8 @@ if errorlevel 1 (
     curl -L -s -o "%target%\cup.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/cup.bat
     if exist "%target%\cup.bat" (
         start "" "%target%\cup.bat"
-        call :log "Launched cup.bat"
         echo Cup spoofer started.
     ) else (
-        call :log "Cup spoofer download failed"
         echo Download failed.
     )
     pause
@@ -223,14 +198,12 @@ for /L %%p in (1,1,20) do (
 goto :eof
 
 :big_status
-set "label=%~1"
 cls
 echo ================================================================================ 
-echo                          %label%
+echo                          %~1
 echo ================================================================================ 
 echo.
 goto :eof
 
 :end
 exit /b
-
