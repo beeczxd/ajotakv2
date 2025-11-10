@@ -158,7 +158,6 @@ goto menu
 cls
 call :big_status "FORTNITE FIXER"
 call :log "Selected Fortnite Fixer"
-echo This will attempt a non-destructive repair.
 choice /C YN /M "Proceed with Fortnite Fixer? (Y/N)"
 if errorlevel 2 goto menu
 if errorlevel 1 (
@@ -234,3 +233,4 @@ goto :eof
 
 :end
 exit /b
+
