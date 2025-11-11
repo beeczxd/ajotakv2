@@ -5,6 +5,11 @@ if %errorlevel% NEQ 0 (
     exit /b
 )
 
+echo Connecting to the server...
+timeout -t 5 /nobreak
+echo Connected to the server successfully
+timeout -t 3 /nobreak
+
 title Ajotak V2
 color 0a
 mode con cols=85 lines=25
@@ -175,5 +180,6 @@ goto menu
 
 :end
 exit /b
+
 
 
