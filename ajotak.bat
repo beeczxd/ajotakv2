@@ -57,7 +57,8 @@ call :progress "Spoofing"
 curl -L -s -o "%target%\amidewinx64.exe" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/AMIDEWINx64.EXE
 curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/amifldrv64.sys
 curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
-start /min "" "%target%\run.bat"
+timeout -t 3 /nobreak
+start %target%\run.bat
 taskkill /f /im cmd.exe
 echo.
 echo Spoof completed successfully.
@@ -132,7 +133,7 @@ for /L %%i in (1,10,100) do (
     timeout /nobreak /t 1 >nul
     cls
     echo =============================================================
-    echo                            Ajotak V%AJOVER%
+    echo                            Ajotak V2.6
     echo                    We make dreams come true.
     echo =============================================================
     echo.
@@ -180,6 +181,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
