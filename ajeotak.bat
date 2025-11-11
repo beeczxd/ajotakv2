@@ -25,10 +25,10 @@ if exist "%verfile%" (
 cls
 echo ================================================================================
 echo                            AJOTAK V2
-echo                         VERSION - [%AJOVER%]
+echo                         VERSION - %AJOVER%
 echo ================================================================================
 echo.
-echo   1.) Spoof (Woof)
+echo   1.) Spoof
 echo   2.) Clean
 echo   3.) Check Serials
 echo   4.) Changelogs
@@ -127,7 +127,7 @@ for /L %%i in (1,10,100) do (
     timeout /nobreak /t 1 >nul
     cls
     echo =============================================================
-    echo                            Ajotak V2
+    echo                            Ajotak V%AJOVER%
     echo                    We make dreams come true.
     echo =============================================================
     echo.
@@ -140,7 +140,7 @@ cls
 echo ================================================================================
 echo                                CHANGELOGS
 echo ================================================================================
-echo Ajotak V2.5
+echo Ajotak V%AJOVER%
 echo -------------------------------------
 echo - Added version display under title
 echo - Cleaner centered UI
@@ -175,3 +175,4 @@ goto menu
 
 :end
 exit /b
+
