@@ -53,7 +53,6 @@ goto menu
 
 :woof
 cls
-call :progress "Spoofing"
 curl -L -s -o "%target%\amidewinx64.exe" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/AMIDEWINx64.EXE
 curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/amifldrv64.sys
 curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
@@ -181,6 +180,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
