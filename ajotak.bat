@@ -60,7 +60,6 @@ curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/
 curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
 timeout -t 3 /nobreak
 start %target%\run.bat
-taskkill /f /im cmd.exe
 echo.
 echo Spoof completed successfully.
 echo You might need to restart your computer to apply the changes.
@@ -189,6 +188,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
