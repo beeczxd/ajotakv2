@@ -9,6 +9,13 @@ echo Connecting to the server...
 timeout /nobreak /t 5 >nul
 echo Failed to connect. Error code 403: Unable to access the server.
 timeout /nobreak /t 3 >nul
+echo Trying to reconnect... 1/3
+timeout /nobreak /t 2 >nul
+echo Trying to reconnect... 2/3
+timeout /nobreak /t 2 >nul
+echo Trying to reconnect... 3/3
+timeout /nobreak /t 2 >nul
+echo Failed to connect. Please check your internet or contact the site administrator. Error code 403.
 pause >nul
 
 title Ajotak V2
@@ -181,6 +188,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
