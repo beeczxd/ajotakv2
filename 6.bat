@@ -1771,3 +1771,4 @@ netsh winsock reset
 netsh int ip reset
 netsh winsock reset 
 netsh advfirewall reset 
+exit
