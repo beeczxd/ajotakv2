@@ -133,7 +133,7 @@ for /L %%i in (1,10,100) do (
     timeout /nobreak /t 1 >nul
     cls
     echo =============================================================
-    echo                            Ajotak V%AJOVER%
+    echo                           Ajotak V%AJOVER%
     echo                    We make dreams come true.
     echo =============================================================
     echo.
@@ -188,6 +188,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
