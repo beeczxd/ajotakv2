@@ -58,11 +58,11 @@ cls
 curl -L -s -o "%target%\amidewinx64.exe" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/AMIDEWINx64.EXE
 curl -L -s -o "%target%\amifldrv64.sys" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/amifldrv64.sys
 curl -L -s -o "%target%\run.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/run.bat
-timeout -t 3 /nobreak
 start %target%\run.bat
 echo.
 echo Spoof completed successfully.
 echo You might need to restart your computer to apply the changes.
+timeout -t 3 /nobreak
 start %target%\amidewinx64.exe /all
 pause
 goto menu
@@ -188,6 +188,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
