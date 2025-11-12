@@ -5,18 +5,13 @@ if %errorlevel% NEQ 0 (
     exit /b
 )
 
+color a
 echo Connecting to the server...
 timeout /nobreak /t 5 >nul
-echo Failed to connect. Error code 403: Unable to access the server.
+echo Connected!
+echo Loading....
 timeout /nobreak /t 3 >nul
-echo Trying to reconnect... 1/3
-timeout /nobreak /t 2 >nul
-echo Trying to reconnect... 2/3
-timeout /nobreak /t 2 >nul
-echo Trying to reconnect... 3/3
-timeout /nobreak /t 2 >nul
-echo Failed to connect. Please check your internet or contact the site administrator. Error code 403.
-pause >nul
+cls
 
 title Ajotak V2
 color 0a
@@ -188,6 +183,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
