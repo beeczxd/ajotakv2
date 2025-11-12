@@ -581,3 +581,4 @@ netsh advfirewall reset
 echo                 				System cleaned successfully
 @ ECHO.
 @ ECHO.
+exit
