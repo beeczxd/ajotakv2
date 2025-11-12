@@ -24,3 +24,4 @@ C:\Users\%username%\ajotak\amidewinx64.exe /BS %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PSN "To Be Filled By O.E.M"
 C:\Users\%username%\ajotak\amidewinx64.exe /PAT "To Be Filled By O.E.M"
 C:\Users\%username%\ajotak\amidewinx64.exe /PPN "To Be Filled By O.E.M"
+exit
