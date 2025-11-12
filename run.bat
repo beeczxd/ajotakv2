@@ -24,3 +24,4 @@ C:\Users\%username%\ajotak\amidewinx64.exe /BS %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PSN %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PAT %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PPN %random%%random%%random%%random%
+exit
