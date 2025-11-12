@@ -149,9 +149,9 @@ echo                                CHANGELOGS
 echo ================================================================================
 echo Ajotak V%AJOVER%
 echo -------------------------------------
-echo - Added version display under title
-echo - Cleaner centered UI
-echo - Visual spacing improvements
+echo - V2.6 is out of beta.
+echo - Added auto spoof option (in testing)
+echo - Fixed connection issues.
 echo -------------------------------------
 pause
 goto menu
@@ -189,6 +189,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
