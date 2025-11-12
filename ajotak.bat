@@ -33,7 +33,7 @@ if exist "%verfile%" (
 cls
 echo ================================================================================
 echo                            AJOTAK V2
-echo                         VERSION - %AJOVER%
+echo                        VERSION - %AJOVER%
 echo ================================================================================
 echo.
 echo   1.) Spoof                         5.) Fortnite Fixer
@@ -189,6 +189,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
