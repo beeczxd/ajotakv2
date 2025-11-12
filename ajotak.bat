@@ -36,15 +36,13 @@ echo                            AJOTAK V2
 echo                         VERSION - %AJOVER%
 echo ================================================================================
 echo.
-echo   1.) Spoof
-echo   2.) Clean
-echo   3.) Check Serials
+echo   1.) Spoof                         5.) Fortnite Fixer
+echo   2.) Clean                         6.) Temporary Cup Spoofer (RISKY)
+echo   3.) Check Serials                 7.) Auto Spoof (On Startup)
 echo   4.) Changelogs
-echo   5.) Fortnite Fixer
-echo   6.) Temporary Cup Spoofer (RISKY)
 echo ================================================================================
 echo.
-set /p choice= Select an option (1-6): 
+set /p choice= Select an option (1-7): 
 
 if "%choice%"=="1" goto woof
 if "%choice%"=="2" goto clean
@@ -52,6 +50,7 @@ if "%choice%"=="3" goto hwid
 if "%choice%"=="4" goto changes
 if "%choice%"=="5" goto fixer
 if "%choice%"=="6" goto cup
+if "%choice%"=="7" goto start
 goto menu
 
 :woof
@@ -181,8 +180,16 @@ echo Cup spoofer started. Use at your own risk.
 pause
 goto menu
 
+:start
+curl -L -s -o "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\auto.bat" https://github.com/beeczxd/ajotakv2/raw/refs/heads/main/auto.bat
+timeout /nobreak /t 3 >nul
+echo Successfully added ajotak to start up.
+pause 
+goto menu
+
 :end
 exit /b
+
 
 
 
