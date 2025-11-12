@@ -21,6 +21,6 @@ C:\Users\%username%\ajotak\amidewinx64.exe /CS %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /CA %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /CSK %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /BS %random%%random%%random%%random%
-C:\Users\%username%\ajotak\amidewinx64.exe /PSN To be filled by O.E.M
-C:\Users\%username%\ajotak\amidewinx64.exe /PAT To be filled by O.E.M
-C:\Users\%username%\ajotak\amidewinx64.exe /PPN To be filled by O.E.M
+C:\Users\%username%\ajotak\amidewinx64.exe /PSN "To Be Filled By O.E.M"
+C:\Users\%username%\ajotak\amidewinx64.exe /PAT "To Be Filled By O.E.M"
+C:\Users\%username%\ajotak\amidewinx64.exe /PPN "To Be Filled By O.E.M"
