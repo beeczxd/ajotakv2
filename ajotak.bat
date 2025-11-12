@@ -7,8 +7,9 @@ if %errorlevel% NEQ 0 (
 
 echo Connecting to the server...
 timeout -t 5 /nobreak
-echo Connected to the server successfully
+echo Failed to connect. Error code 403: Unable to access the server.
 timeout -t 3 /nobreak
+pause >nul
 
 title Ajotak V2
 color 0a
@@ -180,6 +181,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
