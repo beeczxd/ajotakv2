@@ -39,7 +39,7 @@ echo.
 echo   1.) Spoof                         5.) Fortnite Fixer
 echo   2.) Clean                         6.) Temporary Cup Spoofer (RISKY)
 echo   3.) Check Serials                 7.) Auto Spoof (On Startup)
-echo   4.) Changelogs
+echo   4.) Changelogs                    8.) Coming soon
 echo ================================================================================
 echo.
 set /p choice= Select an option (1-7): 
@@ -51,6 +51,7 @@ if "%choice%"=="4" goto changes
 if "%choice%"=="5" goto fixer
 if "%choice%"=="6" goto cup
 if "%choice%"=="7" goto start
+if "%choice%"=="8" goto changes
 goto menu
 
 :woof
@@ -188,6 +189,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
