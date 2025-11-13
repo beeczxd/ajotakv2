@@ -42,7 +42,7 @@ echo   3.) Check Serials                 7.) Auto Spoof (On Startup)
 echo   4.) Changelogs                    8.) Coming soon
 echo ================================================================================
 echo.
-set /p choice= Select an option (1-7): 
+set /p choice= Select an option (1-8): 
 
 if "%choice%"=="1" goto woof
 if "%choice%"=="2" goto clean
@@ -189,6 +189,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
