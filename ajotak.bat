@@ -8,14 +8,13 @@ if %errorlevel% NEQ 0 (
 color a
 echo Connecting to the server...
 timeout /nobreak /t 5 >nul
-echo Connection failed
 echo Loading....
 timeout /nobreak /t 3 >nul
 cls
-echo Connection failed! Please check your internet or contact the website owner.
-echo Error code: Skill issue detected.
-pause >nul
-exit /b
+echo Connection successful!
+echo Please wait. Loading the main page...
+timeout /nobreak /t 2 >nul
+cls
 
 title Ajotak V2
 color 0a
@@ -193,6 +192,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
