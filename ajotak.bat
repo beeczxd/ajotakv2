@@ -13,7 +13,7 @@ echo Loading....
 timeout /nobreak /t 3 >nul
 cls
 echo Connection failed! Please check your internet or contact the website owner.
-echo Error code: 403
+echo Error code: Skill issue detected.
 pause >nul
 exit /b
 
@@ -193,6 +193,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
