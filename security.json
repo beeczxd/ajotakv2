@@ -1,0 +1,12 @@
+[
+  {
+    "key": "A9XF2B1Q-P7DMQ3Z9F21H-9K4M-J1TB8XZR",
+    "username": "Oracl",
+    "expires": "Lifetime"
+  },
+  {
+    "key": "TEST-KEY-999",
+    "username": "TestUser",
+    "expires": "2026-01-01"
+  }
+]
