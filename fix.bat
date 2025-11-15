@@ -12,7 +12,7 @@ echo.
 set /p fnpath=Enter full path to your Fortnite folder (e.g. D:\Games\Fortnite): 
 if not exist "%fnpath%\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe" (
     echo.
-    echo Invalid path. Fortnite not found.
+    echo Invalid path. Make sure Fortnite is installed.
     timeout /t 2 >nul
     goto input
 )
@@ -31,15 +31,13 @@ echo.
 echo Loading...
 timeout /t 1 >nul
 echo Trying to refresh folder
-timeout /t 1 >nul
+timeout /t 2 >nul
 echo Done
-cls
 echo Changing some values
-timeout /t 1 >nul
+timeout /t 3 >nul
 echo Done
-cls
 echo Convincing Epic Games that its real
-timeout /t 1 >nul
+timeout /t 4 >nul
 echo Done
 cls
 
@@ -64,15 +62,16 @@ timeout /t 1 >nul
 
 echo Making sure everything is correct...
 ren "%parentPath%\Fortnite2" "Fortnite"
-timeout /t 1 >nul
+timeout /t 2 >nul
 
 echo Launching Epic Games Launcher...
-start "" "com.epicgames.launcher://"
+start "" "C:\Program Files\Epic Games\Launcher\Engine\Binaries\Win64\EpicGamesLauncher.exe"
 timeout /t 2 >nul
 
 echo.
 echo Done. Fortnite should now be detected properly.
 pause
 exit
+
 
 
