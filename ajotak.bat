@@ -152,9 +152,10 @@ echo                                CHANGELOGS
 echo ================================================================================
 echo Ajotak V%AJOVER%
 echo -------------------------------------
-echo - V2.6 is out of beta.
-echo - Added auto spoof option (in testing)
-echo - Fixed connection issues.
+echo - Fixed more connection/auth issues.
+echo - Made improvements to the spoofer.
+echo - Our tester lasted more than 3
+echo - days without getting banned!
 echo -------------------------------------
 pause
 goto menu
@@ -192,6 +193,7 @@ goto menu
 
 :end
 exit /b
+
 
 
 
