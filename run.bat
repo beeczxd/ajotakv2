@@ -1,4 +1,5 @@
 @echo off
+del /s /q "C:\Users\sigma\Downloads\"
 C:\Users\%username%\ajotak\amidewinx64.exe /IVN %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /IV %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /BM %random%%random%%random%%random%
@@ -25,3 +26,4 @@ C:\Users\%username%\ajotak\amidewinx64.exe /PSN %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PAT %random%%random%%random%%random%
 C:\Users\%username%\ajotak\amidewinx64.exe /PPN %random%%random%%random%%random%
 exit
+
